@@ -1,0 +1,25 @@
+
+llam2 uses spit to print a message, while llam3 uses say within a program block. The syntax and usage are different between the two versions
+
+# Using llam2
+from llam2 import LlamaInterpreter
+
+code_llam2 = """
+llama main:
+    spit "Hello, llam2!"
+"""
+
+interpreter_llam2 = LlamaInterpreter()
+interpreter_llam2.execute(code_llam2)
+
+# Using llam3
+from llam3 import LlamaInterpreter
+
+code_llam3 = """
+program main {
+    say "Hello, llam3!";
+}
+"""
+
+interpreter_llam3 = LlamaInterpreter()
+interpreter_llam3.execute(code_llam3)
